@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5179D21DE9F71300BFB656 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5179D11DE9F71300BFB656 /* LeaderBoard.swift */; };
+		CD5179D51DE9FC7100BFB656 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5179D41DE9FC7100BFB656 /* Constants.swift */; };
 		CD7D62711DE9F54F002F4832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D62701DE9F54F002F4832 /* AppDelegate.swift */; };
 		CD7D62731DE9F54F002F4832 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D62721DE9F54F002F4832 /* ViewController.swift */; };
 		CD7D62761DE9F54F002F4832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62741DE9F54F002F4832 /* Main.storyboard */; };
 		CD7D62781DE9F54F002F4832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62771DE9F54F002F4832 /* Assets.xcassets */; };
 		CD7D627B1DE9F54F002F4832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62791DE9F54F002F4832 /* LaunchScreen.storyboard */; };
+		CDF43E5C1DEA3C4D003D8E9A /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E5B1DEA3C4D003D8E9A /* LeaderBoardCell.swift */; };
 		DF2E5B030A618E6F1C2FEFEA /* Pods_leaderboard_glympe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA748A64F869815545A231C /* Pods_leaderboard_glympe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		80A70ABE4CBFEDCE611CD0EE /* Pods-leaderboard-glympe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leaderboard-glympe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-leaderboard-glympe/Pods-leaderboard-glympe.debug.xcconfig"; sourceTree = "<group>"; };
 		958049EC53FDCAA7925A81F4 /* Pods-leaderboard-glympe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leaderboard-glympe.release.xcconfig"; path = "Pods/Target Support Files/Pods-leaderboard-glympe/Pods-leaderboard-glympe.release.xcconfig"; sourceTree = "<group>"; };
+		CD5179D11DE9F71300BFB656 /* LeaderBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
+		CD5179D41DE9FC7100BFB656 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD7D626D1DE9F54F002F4832 /* leaderboard-glympe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "leaderboard-glympe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7D62701DE9F54F002F4832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7D62721DE9F54F002F4832 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +30,7 @@
 		CD7D62771DE9F54F002F4832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7D627A1DE9F54F002F4832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7D627C1DE9F54F002F4832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF43E5B1DEA3C4D003D8E9A /* LeaderBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
 		FDA748A64F869815545A231C /* Pods_leaderboard_glympe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leaderboard_glympe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +66,7 @@
 		CD5179CE1DE9F63D00BFB656 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD5179D11DE9F71300BFB656 /* LeaderBoard.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -75,8 +82,17 @@
 		CD5179D01DE9F65C00BFB656 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDF43E5B1DEA3C4D003D8E9A /* LeaderBoardCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		CD5179D31DE9FC5F00BFB656 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CD5179D41DE9FC7100BFB656 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		CD7D62641DE9F54F002F4832 = {
@@ -100,6 +116,7 @@
 		CD7D626F1DE9F54F002F4832 /* leaderboard-glympe */ = {
 			isa = PBXGroup;
 			children = (
+				CD5179D31DE9FC5F00BFB656 /* Utilities */,
 				CD5179CE1DE9F63D00BFB656 /* Model */,
 				CD5179D01DE9F65C00BFB656 /* View */,
 				CD5179CF1DE9F65100BFB656 /* Controller */,
@@ -236,8 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF43E5C1DEA3C4D003D8E9A /* LeaderBoardCell.swift in Sources */,
 				CD7D62731DE9F54F002F4832 /* ViewController.swift in Sources */,
+				CD5179D21DE9F71300BFB656 /* LeaderBoard.swift in Sources */,
 				CD7D62711DE9F54F002F4832 /* AppDelegate.swift in Sources */,
+				CD5179D51DE9FC7100BFB656 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

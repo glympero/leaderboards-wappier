@@ -7,4 +7,5 @@ target 'leaderboard-glympe' do
 
   # Pods for leaderboard-glympe
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
 end
