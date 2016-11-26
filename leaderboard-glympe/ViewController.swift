@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let user = "test_me"
+        let password = "G00dw11L"
+        var headers: HTTPHeaders = [:]
+        
+        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
+        
+        Alamofire.request("https://test.wappier.com/api/leaderboard/1", headers: headers).responseJSON { response in
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
