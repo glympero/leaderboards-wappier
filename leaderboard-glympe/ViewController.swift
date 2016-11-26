@@ -11,17 +11,17 @@ import Alamofire
 import SwiftyJSON
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let currentLeaderBoard = 0
+    @IBOutlet weak var tableView: UITableView!
+    var currentLeaderBoard = 0
+    var globalRank = 1
     var leaderBoard = [LeaderBoard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloadLeaderBoard() {
-            (result: String) in
-                print(self.leaderBoard[0].avatar)
-        }
+        downloadAndReloadTable()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,16 +29,36 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func refreshTable(_ sender: Any) {
-        print(leaderBoard[0].avatar)
+        downloadAndReloadTable()
     }
     
-    func test(){
-        print("After")
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1;
     }
-    func downloadLeaderBoard(completion: @escaping (_ result: String) -> Void){
-        let currentPage = 0
-        let user = "test_me"
-        let password = "G00dw11L"
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return leaderBoard.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        if(indexPath.row == (leaderBoard.count - 1)){
+            currentLeaderBoard = currentLeaderBoard + 1
+            downloadAndReloadTable()
+            
+        }
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderBoardCell", for: indexPath) as? LeaderBoardViewCell{
+            let lb: LeaderBoard!
+            lb = leaderBoard[indexPath.row]
+            cell.configureCell(lb)
+            return cell;
+        } else {
+            return UITableViewCell()
+        }
+    }
+
+    func downloadLeaderBoard(currentPage: Int, completion: @escaping (_ result: String) -> Void){
+        let user = USERNAME
+        let password = PASSWORD
         let stringUrl = "\(URL_BASE)\(currentPage)/"
         let url = URL(string: stringUrl)!
         var headers: HTTPHeaders = [:]
@@ -49,22 +69,27 @@ class ViewController: UIViewController {
         
         Alamofire.request(url, headers: headers).responseJSON { response in
             guard let object = response.result.value else {
-                print("Oh, no!!!")
                 return
             }
             let json = JSON(object)
             if let jArray = json.array {
-                var index = 1;
                 for lb in jArray {
                     if let avatar = lb["avatar"].string, let point = lb["points"].int, let name = lb["name"].string {
-                        let l = LeaderBoard(avatar: avatar, name: name, points: point, rank: index)
+                        let l = LeaderBoard(avatar: avatar, name: name, points: point, rank: self.globalRank)
                         //Append to array
                         self.leaderBoard.append(l)
                     }
-                    index = index+1;
+                    self.globalRank = self.globalRank+1;
                 }
             }
-            completion("we finished!")
+            completion("FINISHED")
+        }
+    }
+    
+    func downloadAndReloadTable(){
+        downloadLeaderBoard(currentPage: currentLeaderBoard) {
+            (result: String) in
+            self.tableView.reloadData()
         }
     }
 }

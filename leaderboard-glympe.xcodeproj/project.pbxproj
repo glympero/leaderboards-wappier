@@ -14,7 +14,8 @@
 		CD7D62761DE9F54F002F4832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62741DE9F54F002F4832 /* Main.storyboard */; };
 		CD7D62781DE9F54F002F4832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62771DE9F54F002F4832 /* Assets.xcassets */; };
 		CD7D627B1DE9F54F002F4832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62791DE9F54F002F4832 /* LaunchScreen.storyboard */; };
-		CDF43E5C1DEA3C4D003D8E9A /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E5B1DEA3C4D003D8E9A /* LeaderBoardCell.swift */; };
+		CDF43E5E1DEA3F79003D8E9A /* LeaderBoardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E5D1DEA3F79003D8E9A /* LeaderBoardViewCell.swift */; };
+		CDF43E621DEA4D1A003D8E9A /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E611DEA4D1A003D8E9A /* RoundImage.swift */; };
 		DF2E5B030A618E6F1C2FEFEA /* Pods_leaderboard_glympe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA748A64F869815545A231C /* Pods_leaderboard_glympe.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +31,8 @@
 		CD7D62771DE9F54F002F4832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7D627A1DE9F54F002F4832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7D627C1DE9F54F002F4832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF43E5B1DEA3C4D003D8E9A /* LeaderBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
+		CDF43E5D1DEA3F79003D8E9A /* LeaderBoardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewCell.swift; sourceTree = "<group>"; };
+		CDF43E611DEA4D1A003D8E9A /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		FDA748A64F869815545A231C /* Pods_leaderboard_glympe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leaderboard_glympe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,7 +84,8 @@
 		CD5179D01DE9F65C00BFB656 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CDF43E5B1DEA3C4D003D8E9A /* LeaderBoardCell.swift */,
+				CDF43E5D1DEA3F79003D8E9A /* LeaderBoardViewCell.swift */,
+				CDF43E611DEA4D1A003D8E9A /* RoundImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -253,10 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF43E5C1DEA3C4D003D8E9A /* LeaderBoardCell.swift in Sources */,
 				CD7D62731DE9F54F002F4832 /* ViewController.swift in Sources */,
 				CD5179D21DE9F71300BFB656 /* LeaderBoard.swift in Sources */,
 				CD7D62711DE9F54F002F4832 /* AppDelegate.swift in Sources */,
+				CDF43E5E1DEA3F79003D8E9A /* LeaderBoardViewCell.swift in Sources */,
+				CDF43E621DEA4D1A003D8E9A /* RoundImage.swift in Sources */,
 				CD5179D51DE9FC7100BFB656 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
