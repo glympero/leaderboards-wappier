@@ -15,6 +15,7 @@ class LeaderBoardViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var rank: UILabel!
     @IBOutlet weak var points: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,21 +30,36 @@ class LeaderBoardViewCell: UITableViewCell {
         rank.text = "\(self.leaderBoard.rank)"
         name.text = leaderBoard.name
         points.text = "\(self.leaderBoard.points)"
+        loadImageFromUrl(url: leaderBoard.avatar, view: avatar)
     }
     
-    func getName() -> String{
-        return leaderBoard.name
-    }
+//    func getName() -> String{
+//        return leaderBoard.name
+//    }
+//    
+//    func getId() -> Int{
+//        return leaderBoard.rank
+//    }
+//    
+//    func getAvatar() -> String{
+//        return leaderBoard.avatar
+//    }
+//    
+//    func getPoints() -> Int {
+//        return leaderBoard.points
+//    }
     
-    func getId() -> Int{
-        return leaderBoard.rank
-    }
-    
-    func getAvatar() -> String{
-        return leaderBoard.avatar
-    }
-    
-    func getPoints() -> Int {
-        return leaderBoard.points
+    func loadImageFromUrl(url: String, view: UIImageView){
+        
+        let url = NSURL(string: url)!
+        
+        let task = URLSession.shared.dataTask(with: url as URL) { (responseData, responseUrl, error) -> Void in
+            if let data = responseData{
+                DispatchQueue.main.async(execute: { () -> Void in
+                    view.image = UIImage(data: data)
+                })
+            }
+        }
+        task.resume()
     }
 }
