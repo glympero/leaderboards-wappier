@@ -16,6 +16,7 @@
 		CD7D627B1DE9F54F002F4832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D62791DE9F54F002F4832 /* LaunchScreen.storyboard */; };
 		CDF43E5E1DEA3F79003D8E9A /* LeaderBoardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E5D1DEA3F79003D8E9A /* LeaderBoardViewCell.swift */; };
 		CDF43E621DEA4D1A003D8E9A /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E611DEA4D1A003D8E9A /* RoundImage.swift */; };
+		CDF43E661DEA5A36003D8E9A /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF43E651DEA5A36003D8E9A /* ImageHelper.swift */; };
 		DF2E5B030A618E6F1C2FEFEA /* Pods_leaderboard_glympe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA748A64F869815545A231C /* Pods_leaderboard_glympe.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		CD7D627C1DE9F54F002F4832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF43E5D1DEA3F79003D8E9A /* LeaderBoardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewCell.swift; sourceTree = "<group>"; };
 		CDF43E611DEA4D1A003D8E9A /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		CDF43E651DEA5A36003D8E9A /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		FDA748A64F869815545A231C /* Pods_leaderboard_glympe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leaderboard_glympe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				CD5179D41DE9FC7100BFB656 /* Constants.swift */,
+				CDF43E651DEA5A36003D8E9A /* ImageHelper.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				CDF43E5E1DEA3F79003D8E9A /* LeaderBoardViewCell.swift in Sources */,
 				CDF43E621DEA4D1A003D8E9A /* RoundImage.swift in Sources */,
 				CD5179D51DE9FC7100BFB656 /* Constants.swift in Sources */,
+				CDF43E661DEA5A36003D8E9A /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

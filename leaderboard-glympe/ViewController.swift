@@ -21,7 +21,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadAndReloadTable()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +28,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     @IBAction func refreshTable(_ sender: Any) {
+        leaderBoard.removeAll()
+        currentLeaderBoard = 0
+        globalRank = 1
         downloadAndReloadTable()
     }
     
